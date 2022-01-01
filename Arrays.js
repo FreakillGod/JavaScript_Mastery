@@ -48,3 +48,23 @@ const myArray=['val1',"cal2","val3","val4","val5"];
 console.log(items1,items2,items3,"-------------mark 3")
 
 
+//IMPORTANT ARRAY METHODs =>forEach, map 
+//calling function inside loop
+let num=[23,54,65,23,54];
+
+// const addition=(num,index)=>{
+//     console.log("index:",index,"number is",num,"and its 2x is ",num*2);
+//     // for(let i=0;i<num.length;i++){
+//     //     addition(num[i],i)
+//     // }
+// }
+// addition(num)
+
+//___forEach___ (Shortcut) passes the number and index automatically
+//it does the same work of for loop above
+// num.forEach(addition);
+
+//Extra Short
+num.forEach(function(num,index){
+    console.log("index:",index,"number is",num,"and its 2x is ",num*2);
+})
