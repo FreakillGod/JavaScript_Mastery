@@ -95,7 +95,8 @@ hello.prototype.sing();
 // }
 
 function fullDescription(fname,lastname,email,age,address){
-    let userInfo=Object.create(fullDescription.prototype);   //protoype object id pass here
+    //here in bracket the proto is sending object to prototype when the item is not found
+    let userInfo=Object.create(fullDescription.prototype);   //protoype object id here 
     userInfo.fname=fname;
     userInfo.lastname=lastname;
     userInfo.email=email;
