@@ -85,3 +85,77 @@ const []=users; //clones the user object into array
 //we us {} to destructure from the object then seleting the required element
 const[{userid:firstname},,{agee}]=users;  //will create two constant userid and agee
 console.log(firstname,agee) //firstname is now refrencing to userid 
+
+
+//OBJECT PRACTISE  with Methods()
+
+function fullDescription(fname,lastname,email,age,address){
+    let userInfo={};
+    userInfo.fname=fname;
+    userInfo.lastname=lastname;
+    userInfo.email=email;
+    userInfo.age=age;
+    userInfo.address=address;
+    userInfo.about = function(){
+        return `Name is ${fname,lastname}, age is ${age}, email ${email}, address ${address}} `;
+    };
+    userInfo.is18=function(){
+        return this.age>=18;
+    };
+    return userInfo; 
+}
+
+const user1=fullDescription("vikash","tilak","free@gmail.com",34,"mumbai");
+console.log(user1);
+const uerinfo=user1.about();
+console.log(uerinfo);
+
+// in above code ithe methods are getting created for evry user so it is bad practise for memory
+// so let make a methos that initialize for only one time
+
+const useMethods = {
+    about : function(){
+    return `Name is ${this.fname,this.lastname}, age is ${this.age}, email ${this.email}, address ${this.address} `},
+    is18 :function(){
+    return this.age >=18;
+    }
+}
+
+function fullDesc(fname,lastname,email,age,address){
+    let userInfo={};
+    userInfo.fname=fname;
+    userInfo.lastname=lastname;
+    userInfo.email=email;
+    userInfo.age=age;
+    userInfo.address=address;
+    userInfo.about = useMethods.about;
+    userInfo.is18 = useMethods.is18;
+    return userInfo; 
+}
+
+const myname=fullDesc("MAHABHARATA","malva","free@gmail.com",54,"mumbai");
+const myname1=fullDesc("HSRETWEXz","gsgda","yahil.com",14,"bambai");
+console.log(myname);
+console.log(myname.about());
+console.log(myname.is18());
+
+//BUT ALSO IN THE ABOVE CODE YOU CAN SEE THAT WE HAVE TO STORE THAT FUNCTION REFERNCE INSIDE OUR MAIN FUCTION
+//SO AS MANY TIMES WE ARE CREATING NEW METHOD WE HAVE TO ADD TAHT METHOD REFERENCE IN OUT FUNCTION NAME
+
+// CALLING METHOS FROM ONE OBJECT TO ANOTHER
+//****************    METHOS CHAINNING    ********************/
+
+const OBJ1={
+    key1 : "value1",
+    key2 : "value2"
+}
+// there is one more way to create empty object
+//will use that methos to create object chaning
+
+const OBJ2=Object.create(OBJ1);
+
+console.log(OBJ2);
+OBJ2.key4="value4";
+console.log(OBJ2.key1);
+
+//**********  CHECK PROTOTYPR  **************/

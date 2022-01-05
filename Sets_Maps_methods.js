@@ -123,7 +123,7 @@ const mohan={
     fname:"mohan",
     age:62,
     about:function(music,dance){
-console.log("the person name is ", this.fname,"and person age is ",this.age,"favourite music and dance",music,dance)
+console.log("maybe name is ", this.fname,"and person age is ",this.age,"favourite music and dance",music,dance)
     }
 }
 const mohanFriend={
@@ -132,7 +132,7 @@ const mohanFriend={
 }
 
 function about(music,dance){
-    console.log("the person name is ", this.fname,"and person age is ",this.age,"favourite music and dance",music,dance)
+    console.log("XYZ name is ", this.fname,"and person age is ",this.age,"favourite music and dance",music,dance)
         }
 //calling function from mohan in mohan friend
 
@@ -156,8 +156,8 @@ const users={
     fname:"Rakesh",
     age:"69",
     gender:"male",
-    about:function(){
-        console.log("the person name is ", this.fname,"and person age is ",this.age)
+    about(){        //about() == about: function() OK REMEBER ITS CALLED METHOD
+        console.log("here name is ", this.fname,"and person age is ",this.age)
     }
 }
 
