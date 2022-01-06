@@ -116,3 +116,25 @@ console.log(user1.fullname);
 //now to use the same setName fucntion to change the full name directly bu changing function fullname()
 user1.fullname="vikash patel";
 console.log(user1);
+
+//Staitic method
+//it is directly related to class and cannot be called by object
+
+class YoYo{
+    constructor(fname,lname){
+        this.fname=fname;
+        this.lname=lname;
+    }
+    fullname(){
+        return `${this.fname} and ${this.lname}`;
+    }
+    static goro(){      //static method
+        console.log(" this method can be only access using class")
+    }
+}
+
+let anime=new YoYo("saitama","onePunch");
+console.log(anime.fullname());
+
+//to call static method from class
+YoYo.goro();
