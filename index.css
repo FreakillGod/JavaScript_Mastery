@@ -99,7 +99,54 @@ li{
     font-weight: bold;
     color: white;
 }
+.todo-list{
+    text-align: left;
+    font-size: 1.3rem;
+    list-style: none;
+}
+.todo-list li{
+    padding: .7rem;
+    background-color: rgb(27, 78, 100);
+    color: white;
+    text-transform: capitalize;
+    margin-top: .8rem;
+}
 .Heading-two{
     font-size: 30px;
 }
-
+.section-signup{
+    margin: 3rem auto;
+    text-align: center;
+    background-color: rgb(214, 237, 255);
+    padding: 2rem;
+}
+.signup-form{
+    max-width: 800px;
+    min-width: 90%;
+    text-align: left;
+    margin: auto;
+}
+.signup-form label{
+    display: block;
+}
+.signup-form input{
+    display: block;
+    width: 100%;
+    padding: .5rem;
+}
+.form-group{
+    margin-top: 1rem; 
+}
+.signup-form textarea{
+    width: 100%;
+}
+.signup-btn{
+    background: rgb(35 , 70, 84);
+    color: white;
+    padding: 1rem 2rem;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;     /*change display to block to align submit to center*/
+}
