@@ -71,11 +71,11 @@ li{
     margin-top: 2rem;
     text-align: center;
 }
-.bg-dark{
+/* .bg-dark{
     background: rgb(32, 193, 199);
     color: yellow;
     border: 2px solid red;
-}
+} */
 .formList{
     margin-top: .5rem;
     min-height:5.5vh;
